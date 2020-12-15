@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RockPaperSciossors">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userScoreText">
+
+        <ImageView
+            android:id="@+id/scissorsImage"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="scissors"
+            app:srcCompat="@drawable/scissors" />
+
+        <ImageView
+            android:id="@+id/paperImage"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="paper"
+            app:srcCompat="@drawable/paper" />
+
+        <ImageView
+            android:id="@+id/stoneImage"
+            android:layout_width="143dp"
+            android:layout_height="match_parent"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="rock"
+            app:srcCompat="@drawable/stone" />
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="@+id/resultText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="313dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/userScoreText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="297dp"
+        android:text="Your Score: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toStartOf="@+id/cpuScoreText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cpuScoreText"
+        android:layout_width="153dp"
+        android:layout_height="104dp"
+        android:layout_marginEnd="16dp"
+        android:text="CPU Score: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/userScoreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userScoreText"
+        app:layout_constraintTop_toTopOf="@+id/userScoreText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
